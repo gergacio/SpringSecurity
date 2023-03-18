@@ -11,6 +11,8 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AndRequestMatcher;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import java.util.concurrent.TimeUnit;
 
@@ -57,8 +59,9 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
                 .key("somethingverysecured")//extend session with remember me
                 .and()
                 .logout()
-                    .logoutUrl("/logout")
-                    .clearAuthentication(true)
+                .logoutUrl("/logout")
+//                .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET")//if enable csrf delete line couse should be post but not get
+                .clearAuthentication(true)
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID","remember-me")
                 .logoutSuccessUrl("/login");
@@ -68,7 +71,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(daoAuthenticationProvider());
     }
-
+//in memory users for a demo
     //    @Override
 //    @Bean
 //    protected UserDetailsService userDetailsService() {
