@@ -1,20 +1,14 @@
 # SpringSecurityDemo App
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
-* [Setup](#setup)
-* [Usage](#usage)
 * [Project Status](#project-status)
 * [Contact](#contact)
-<!-- * [License](#license) -->
 
 ## General Information
 - SpringSecurityDemo App cover how to implement security in APIs.
-
 
 ## Technologies Used
 
@@ -31,20 +25,6 @@
 - Cross Site Request Forgery
 - Form Based Authentication
 - Database Authentication
-
-## Screenshots
-![Example screenshot]()
-<!-- ![Example screenshot](./screenshots/shopska_salad.png) -->
-<!-- If you have screenshots you'd like to share, include them here. -->
-
-## Setup
-
-<!-- Proceed to describe how to install / get started with the project. -->
-
-
-## Usage
-<!-- How does one go about using it? -->
-
 
 ## Project Status
 Project is: _in progress_ 
